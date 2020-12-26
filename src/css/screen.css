@@ -1,0 +1,45 @@
+#screen{
+    position: absolute;
+    background-color: lightgray;
+    height: 282px;
+    width: 346px;
+    left: 37%;
+    top: 7%;
+    border: 2px solid black;
+    border-radius: 0.2rem;
+}
+
+#side-menu , #display {
+    vertical-align: top;
+    display: inline-block;
+    z-index: 2;
+    height: 100%;
+    width: 50%;
+    background-color: white;
+}
+
+h2{
+    margin-left: 23%;
+}
+
+#list {
+    list-style: none;
+}
+
+#list li{
+    display: block;
+    height: 52.5px;
+    width: 163px;
+    /* background-color: #529aec; */
+    margin-left: -23%;
+    /* color: white; */
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    box-sizing: border-box;
+}
+
+#display{
+    background-image: url('https://previews.123rf.com/images/grigoriy123/grigoriy1231812/grigoriy123181202841/113726058-scenery-of-trees-in-a-beautiful-park.jpg');
+    background-position: center;
+}
