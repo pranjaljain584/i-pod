@@ -9,20 +9,20 @@ class Screen extends React.Component {
                 <div id="side-menu">
                     <h2>I pod</h2>
                     <ul id = "list">
-                        <li>
-                            Cover Flow                    
-                        </li>
+                        <li className="active">
+                            Cover Flow  <i className="fas fa-chevron-right"></i>                  
+                        </li >
 
                         <li>
-                            Songs 
+                            Songs <i className="fas fa-chevron-right"></i>
                         </li>
                         
                         <li>
-                            Games
+                            Games <i className="fas fa-chevron-right"></i>
                         </li>
                         
                         <li>
-                            Settings
+                            Settings <i className="fas fa-chevron-right"></i>
                         </li>
                     </ul>
                 </div>

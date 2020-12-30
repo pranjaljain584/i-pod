@@ -29,14 +29,23 @@ h2{
 #list li{
     display: block;
     height: 52.5px;
-    width: 163px;
-    /* background-color: #529aec; */
-    margin-left: -23%;
-    /* color: white; */
+    width: 165px;
+    margin-left: -25%;
     font-weight: 500;
     font-size: 1.1rem;
-    padding: 12px 20px;
+    padding: 12px 15px;
     box-sizing: border-box;
+}
+
+#list i {
+    float: right;
+    color: white;
+    margin-top: 4px;
+}
+
+.active {
+    background-color: #529aec;
+    color: white;
 }
 
 #display{

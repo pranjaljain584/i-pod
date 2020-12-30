@@ -23,20 +23,20 @@ class Wheel extends React.Component {
 
         return (
             <div id="grey-box" >
-                <div id="white-circle" onMouseOver={xyz} >
-                    <div className="button" id="menu" >
+                <div id="white-circle" onMouseEnter={xyz} draggable="false" >
+                    <div className="button" id="menu" draggable="false"  >
                         <span className="btn-name">Menu</span>
                     </div>
-                    <div className="button" id="rewind" >
+                    <div className="button" id="rewind" draggable="false" >
                         <span className="btn-name"><i className="fas fa-fast-backward"></i></span>
                     </div>
-                    <div className="button" id="centre" >
+                    <div className="button" id="centre" draggable="false" >
                         {/* <span className="btn-name">Menu</span> */}
                     </div>
-                    <div className="button" id="forward" >
+                    <div className="button" id="forward" draggable="false" >
                         <span className="btn-name"><i className="fas fa-fast-forward"></i></span>
                     </div>
-                    <div className="button" id="play-pause" >
+                    <div className="button" id="play-pause" draggable="false" >
                         <span className="btn-name"><i className="fas fa-play"></i> <i className="fas fa-pause"></i></span>
                     </div>
                 </div>
