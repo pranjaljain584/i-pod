@@ -1,0 +1,23 @@
+.wrapper {
+    background-color: lightgrey;
+    height: 630px;
+    width: 410px;
+    position: absolute;
+    left: 37%;
+    top: 5%;
+    border-radius: 4rem;
+    box-shadow: 1px 1px 40px 2px grey inset;
+}
+
+.wrapper::after {
+    content: "";
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/6G_iPod.svg/1200px-6G_iPod.svg.png");
+    width: inherit;
+    height: 40%;
+    position: absolute;
+    bottom: -40.5%;
+    transform: scaleY(-1);
+    background-position: bottom;
+    background-size: cover;
+    opacity: 0.3;
+}

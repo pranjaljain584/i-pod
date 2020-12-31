@@ -3,6 +3,7 @@ import Wheel from "./Wheel";
 import Screen from "./Screen";
 import ZingTouch from 'zingtouch' ;
 import {iPod} from "./data" ;
+import "./css/app.css";
 
 function App() {
 
@@ -13,8 +14,10 @@ function App() {
     var currentAngle = 0;
 
     myRegion.bind(parentTouchArea , myRotate , function(e){
-      
+
         currentAngle += e.detail.distanceFromLast;
+
+        console.log(e.detail.distanceFromOrigin) ;
        
         if(currentAngle > 30 || currentAngle < -20){
             currentAngle = 0 ;
@@ -26,8 +29,8 @@ function App() {
             currentAngle=0 ;
         }
         // console.log( currentAngle) ;
-
     });
+
   }
 
   const [ activeIndex , setIdx ] = useState(0) ;
@@ -53,7 +56,7 @@ function App() {
     }
   
   return (
-    <div>
+    <div className="wrapper">
       <Screen activeIndex={activeIndex} />
       <Wheel zingFunc={zingFunc} />
     </div>
