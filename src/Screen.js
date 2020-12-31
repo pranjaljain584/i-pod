@@ -1,37 +1,34 @@
 import React from "react" ;
 import './css/screen.css' ;
+import { iPod } from "./data";
+import ListItem from "./ListItem";
 
-class Screen extends React.Component {
+function Screen (props) {
 
-    render(){
-        return(
-            <div id="screen">
-                <div id="side-menu">
-                    <h2>I pod</h2>
-                    <ul id = "list">
-                        <li className="active">
-                            Cover Flow  <i className="fas fa-chevron-right"></i>                  
-                        </li >
-
-                        <li>
-                            Songs <i className="fas fa-chevron-right"></i>
-                        </li>
-                        
-                        <li>
-                            Games <i className="fas fa-chevron-right"></i>
-                        </li>
-                        
-                        <li>
-                            Settings <i className="fas fa-chevron-right"></i>
-                        </li>
-                    </ul>
-                </div>
-                <div id="display">
-                    hello
-                </div>
+    return(
+        <div id="screen">
+            <div id="side-menu">
+                <h2>I pod</h2>
+                <ul id = "list">
+                    {
+                        iPod.map( (ele , index) => {
+                            console.log("active idx" , props.activeIndex) ;
+                            return (
+                                <ListItem 
+                                    name={ele}
+                                    key={index}
+                                    isActive={index === props.activeIndex ? true : false }
+                                />
+                            );
+                        })
+                    }
+                </ul>
             </div>
-        )
-    }
+            <div id="display">
+                hello
+            </div>
+        </div>
+    );
 }
 
 export default Screen ;

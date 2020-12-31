@@ -1,29 +1,13 @@
 import React from "react" ;
 import './css/wheel.css' ;
-// import ZingTouch from 'zingtouch' ;
-import {xyz} from "./wheelzing" ;
 
 class Wheel extends React.Component {
 
     render(){
 
-        // var parentTouchArea = document.getElementById('white-circle') ;
-        // var myRegion = new ZingTouch.Region(document.body) ;
-        // // var myRotate = new ZingTouch.Rotate() ; //customized rotate
-        
-        
-        // function handleClick(){
-        //     console.log(parentTouchArea) ;
-        //     myRegion.bind(parentTouchArea , 'rotate' , function(e){
-        //         console.log("rotate") ;
-        //     });
-        // }
-
-
-
         return (
             <div id="grey-box" >
-                <div id="white-circle" onMouseEnter={xyz} draggable="false" >
+                <div id="white-circle" onMouseEnter={this.props.zingFunc} draggable="false" >
                     <div className="button" id="menu" draggable="false"  >
                         <span className="btn-name">Menu</span>
                     </div>
