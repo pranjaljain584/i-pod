@@ -7,16 +7,25 @@ class Wheel extends React.Component {
 
         return (
             <div id="grey-box" >
-                <div id="white-circle" onMouseEnter={this.props.zingFunc} draggable="false" >
+                <div id="white-circle" onMouseOver={this.props.zingFunc} draggable="false" >
                     <div className="button" id="menu" draggable="false"  >
                         <span className="btn-name">Menu</span>
                     </div>
                     <div className="button" id="rewind" draggable="false" >
                         <span className="btn-name"><i className="fas fa-fast-backward"></i></span>
                     </div>
-                    <div className="button" id="centre" draggable="false" >
-                        {/* <span className="btn-name">Menu</span> */}
+
+                    <div 
+                        className="button" 
+                        id="centre" 
+                        draggable="false" 
+                        onClick={()=>{
+                            // console.log("clicked centre");
+                            return this.props.handleClick(this.props.activeIndex);
+                        }} 
+                    >
                     </div>
+
                     <div className="button" id="forward" draggable="false" >
                         <span className="btn-name"><i className="fas fa-fast-forward"></i></span>
                     </div>

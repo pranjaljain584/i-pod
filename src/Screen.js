@@ -1,32 +1,33 @@
 import React from "react" ;
 import './css/screen.css' ;
-import { iPod } from "./data";
-import ListItem from "./ListItem";
+// import { iPod } from "./data";
+// import ListItem from "./ListItem";
+import DefaultScreen from "./DefaultScreen" ;
+import ComponentSelected from "./ComponentSelected" ;
+
 
 function Screen (props) {
 
+    // console.log(props.isCentreClicked , "clicked in screen fn") ;
+    // console.log("comp rendered in screen fn" , props.compRenderName) ;
+
+    // console.log("RENDER") ;
     return(
-        <div id="screen">
-            <div id="side-menu">
-                <h2>I pod</h2>
-                <ul id = "list">
-                    {
-                        iPod.map( (ele , index) => {
-                            console.log("active idx" , props.activeIndex) ;
-                            return (
-                                <ListItem 
-                                    name={ele}
-                                    key={index}
-                                    isActive={index === props.activeIndex ? true : false }
-                                />
-                            );
-                        })
-                    }
-                </ul>
-            </div>
-            <div id="display">
-                hello
-            </div>
+        
+        <div>
+
+            {
+                props.isCentreClicked 
+                ? 
+                <ComponentSelected 
+                    componentName={props.compRenderName}
+                />
+                : 
+                <DefaultScreen
+                    activeIndex={props.activeIndex}
+                />
+            }
+
         </div>
     );
 }

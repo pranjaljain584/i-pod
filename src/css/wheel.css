@@ -20,7 +20,6 @@
 .button {
     height: 78px;
     width: 78px;
-    /* background-color: yellow; */
     position: absolute;
 }
 
@@ -57,7 +56,6 @@
 }
 
 #play-pause{
-    /* height: 75px; */
     top: 67%;
     left: 35%;
 }
