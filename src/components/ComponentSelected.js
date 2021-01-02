@@ -1,5 +1,6 @@
 import React from "react" ;
 import {images} from "../data" ;
+import "../css/componentSelected.css";
 
 function ComponentSelected (props) {
 
@@ -8,8 +9,7 @@ function ComponentSelected (props) {
             {console.log("images[props.componentName]" , images[props.componentName])}
             <img  
                 src={images[props.componentName]}
-                // src={Games}
-                alt={`img-${props.componentName}`}
+                alt={ props.componentName !== "Cover Flow" ? `img-${props.componentName}` : ""}
             />
             <h1>{props.componentName}</h1>
         </div>
