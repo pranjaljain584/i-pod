@@ -19,8 +19,6 @@ function App() {
     var parentTouchArea = document.getElementById('white-circle') ;
     var myRegion = new ZingTouch.Region(parentTouchArea) ;
     var currentAngle = 0;
-    setIsClicked(false) ;
-    setCompRenderName("") ;
     // setBindedRegion(myRegion) ;
 
     myRegion.bind(parentTouchArea , "rotate" , function(e){
@@ -46,11 +44,16 @@ function App() {
   //   }
   // },[changedAC]);
 
-  const handleClick = (acIdx , isClicked) => {
+  const handleClick = (acIdx ) => {
     var val =  list[acIdx].innerText ;
     setCompRenderName(val) ;
     console.log( "in handle click fn" , compRenderName) ;
     setIsClicked(true) ;
+  }
+
+  const handleMenuClick=()=>{
+    setIsClicked(false) ;
+    setCompRenderName("") ;
   }
 
   const [ activeIndex , setIdx ] = useState(0) ;
@@ -83,6 +86,7 @@ function App() {
         zingFunc={zingFunc} 
         activeIndex={activeIndex} 
         handleClick={handleClick}
+        handleMenuClick={handleMenuClick}
       />
     </div>
   );

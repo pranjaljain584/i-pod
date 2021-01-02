@@ -9,7 +9,7 @@ function ComponentSelected (props) {
             {console.log("images[props.componentName]" , images[props.componentName])}
             <img  
                 src={images[props.componentName]}
-                alt={ props.componentName !== "Cover Flow" ? `img-${props.componentName}` : ""}
+                alt={`img-${props.componentName}`}
             />
             <h1>{props.componentName}</h1>
         </div>
