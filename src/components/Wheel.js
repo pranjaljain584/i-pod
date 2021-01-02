@@ -25,9 +25,6 @@ class Wheel extends React.Component {
                         className="button" 
                         id="centre" 
                         draggable="false" 
-                        onDoubleClick={()=>{
-                            return this.props.handleClick(this.props.activeIndex);
-                        }} 
                         onClick={()=>{
                             return this.props.handleClick(this.props.activeIndex);
                         }} 

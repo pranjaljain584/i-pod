@@ -9,9 +9,6 @@ let list = document.getElementsByTagName("li") ;
 
 function App() {
 
-  // const [ changedAC , setChangeAc ] = useState(false) ;
-  // const [bindedRegion , setBindedRegion] = useState() ;
-
   const [ compRenderName , setCompRenderName ] = useState("") ;
   const [ isCentreClicked , setIsClicked ] = useState(false) ;
 
@@ -19,7 +16,6 @@ function App() {
     var parentTouchArea = document.getElementById('white-circle') ;
     var myRegion = new ZingTouch.Region(parentTouchArea) ;
     var currentAngle = 0;
-    // setBindedRegion(myRegion) ;
 
     myRegion.bind(parentTouchArea , "rotate" , function(e){
 
@@ -32,23 +28,18 @@ function App() {
         if( Math.floor(currentAngle) === 20 || Math.floor(currentAngle) === -20){
             findActiveIndex(currentAngle) ;
             currentAngle=0 ;
-            // setChangeAc(!changedAC) ;
         }
     });
 
   }
 
-  // useEffect(()=> {
-  //   if(bindedRegion){
-  //     bindedRegion.unbind(document.getElementById('white-circle') ,'rotate') ;
-  //   }
-  // },[changedAC]);
-
   const handleClick = (acIdx ) => {
-    var val =  list[acIdx].innerText ;
-    setCompRenderName(val) ;
-    console.log( "in handle click fn" , compRenderName) ;
-    setIsClicked(true) ;
+    if(list[acIdx]){
+      var val =  list[acIdx].innerText ;
+      setCompRenderName(val) ;
+      console.log( "in handle click fn" , compRenderName) ;
+      setIsClicked(true) ;
+    }
   }
 
   const handleMenuClick=()=>{
