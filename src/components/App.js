@@ -2,8 +2,8 @@ import React , { useState} from "react" ;
 import Wheel from "./Wheel";
 import Screen from "./Screen";
 import ZingTouch from 'zingtouch' ;
-import {iPod} from "./data" ;
-import "./css/app.css";
+import {iPod} from "../data" ;
+import "../css/app.css";
 
 let list = document.getElementsByTagName("li") ;
 

@@ -1,5 +1,5 @@
 import React from "react" ;
-import './css/screen.css' ;
+import '../css/screen.css' ;
 
 function ListItem (props){
     return(

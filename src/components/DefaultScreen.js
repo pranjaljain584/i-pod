@@ -1,6 +1,6 @@
 import React from "react" ;
-import './css/screen.css' ;
-import { iPod } from "./data";
+import '../css/screen.css' ;
+import { iPod } from "../data";
 import ListItem from "./ListItem";
 
 function DefaultScreen (props) {

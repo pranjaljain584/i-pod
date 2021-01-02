@@ -1,5 +1,5 @@
 import React from "react" ;
-import './css/wheel.css' ;
+import '../css/wheel.css' ;
 
 class Wheel extends React.Component {
 
