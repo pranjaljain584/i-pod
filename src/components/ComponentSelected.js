@@ -6,7 +6,6 @@ function ComponentSelected (props) {
 
     return (
         <div id="screen">
-            {console.log("images[props.componentName]" , images[props.componentName])}
             <img  
                 src={images[props.componentName]}
                 alt={`img-${props.componentName}`}

@@ -9,6 +9,7 @@
     box-shadow: 1px 1px 40px 2px grey inset;
 }
 
+/* for adding reflection effect */
 .wrapper::after {
     content: "";
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/6G_iPod.svg/1200px-6G_iPod.svg.png");

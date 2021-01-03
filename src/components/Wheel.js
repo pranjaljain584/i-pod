@@ -24,7 +24,7 @@ class Wheel extends React.Component {
                     <div 
                         className="button" 
                         id="centre" 
-                        draggable="false" 
+                        draggable="false"
                         onClick={()=>{
                             return this.props.handleClick(this.props.activeIndex);
                         }} 

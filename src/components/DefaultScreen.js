@@ -11,8 +11,8 @@ function DefaultScreen (props) {
                 <h2>I pod</h2>
                 <ul id = "list">
                     {
+                        // mapped every ele from ipod array
                         iPod.map( (ele , index) => {
-                            console.log("active idx" , props.activeIndex) ;
                             return (
                                 <ListItem 
                                     name={ele}
@@ -25,7 +25,7 @@ function DefaultScreen (props) {
                 </ul>
             </div>
             <div id="display">
-                hello
+                
             </div>
 
         </div>
